@@ -1,0 +1,37 @@
+h1{
+    color:black
+}
+#vc{
+color:red 
+
+}
+
+
+#big{
+    width: 300px;
+    height: 300px;
+    animation: myRotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+   position: relative;
+   top: 400px;
+   left: 600px;
+
+    
+    }
+    
+    @keyframes mySlide{
+        from{margin-left:100%;}
+        to{margin-left: 0%;}
+    }
+    
+    
+    
+    
+    
+    @keyframes myRotate{
+    
+    
+        100%{transform: rotateZ(360deg)}
+    }
+    
