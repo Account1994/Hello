@@ -1,7 +1,7 @@
 *{
 padding: 0;
 margin: 0;
-box-sizing: border-box;
+box-sizing: 10;
 
 }
 
@@ -86,3 +86,10 @@ section{
 position: relative;
 }
 
+svg{
+    position: absolute;
+    width: 200px;
+}
+@media (max-width: 760px) {
+    svg{width: 150px;}
+}
