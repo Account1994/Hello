@@ -1,3 +1,12 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+
+}
+
+
+
 h1{
     color:black;
 
@@ -14,9 +23,9 @@ color:black
     width: 300px;
     height: 300px;
     animation: myRotate;
-    animation-duration: 5s;
+    animation-duration: 5s; 
     animation-iteration-count: infinite;
-   position: relative;
+   position: absolute;
    top: 400px;
    left: 600px;
 
@@ -40,6 +49,7 @@ color:black
     
 body
 {
+    overflow: hidden;
   animation: bgcolor infinite 20s;
 }
 @keyframes bgcolor{
@@ -71,3 +81,8 @@ body
     { background:#e74c3c ;
       
 }}
+
+section{
+position: relative;
+}
+
