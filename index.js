@@ -1,4 +1,4 @@
-console.log("very cool thumb");
+console.log("thumbs up copy"); //very cool thumb
 
 const section = document.querySelector("section");
 const logo = document.querySelector(".logo");
@@ -45,3 +45,9 @@ window.addEventListener("resize", () => {
   section.style.height = window.innerHeight + "px";
   section.style.width = window.innerWidth + "px";
 });
+
+
+
+
+
+
