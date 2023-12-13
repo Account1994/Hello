@@ -31,11 +31,9 @@ setInterval(() => {
   // Logo1 movement
   if (xPosition1 + logo1.clientWidth >= window.innerWidth || xPosition1 <= 0) {
     xSpeed1 = -xSpeed1;
-    logo1.style.fill = randomColor();
   }
   if (yPosition1 + logo1.clientHeight >= window.innerHeight || yPosition1 <= 0) {
     ySpeed1 = -ySpeed1;
-    logo1.style.fill = randomColor();
   }
 
   xPosition1 += xSpeed1;
@@ -44,11 +42,9 @@ setInterval(() => {
   // Logo2 movement
   if (xPosition2 + logo2.clientWidth >= window.innerWidth || xPosition2 <= 0) {
     xSpeed2 = -xSpeed2;
-    logo2.style.fill = randomColor();
   }
   if (yPosition2 + logo2.clientHeight >= window.innerHeight || yPosition2 <= 0) {
     ySpeed2 = -ySpeed2;
-    logo2.style.fill = randomColor();
   }
 
   xPosition2 += xSpeed2;
@@ -56,14 +52,6 @@ setInterval(() => {
 
   update();
 }, 1000 / FPS);
-
-function randomColor() {
-  let color = "#";
-  color += Math.random().toString(16).slice(2, 8).toUpperCase();
-  return color;
-}
-
-console.log(randomColor());
 
 window.addEventListener("resize", () => {
   xPosition1 = 10;
@@ -74,5 +62,3 @@ window.addEventListener("resize", () => {
   section.style.height = window.innerHeight + "px";
   section.style.width = window.innerWidth + "px";
 });
-
-
