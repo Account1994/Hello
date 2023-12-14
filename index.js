@@ -17,8 +17,8 @@ let ySpeed1 = 4;
 // Logo2 moving velocity Variables
 let xPosition2 = 50;  //make 10 if it doesnt work
 let yPosition2 = 10; 
-let xSpeed2 = 8;
-let ySpeed2 = 8;
+let xSpeed2 = 16;
+let ySpeed2 = 16;
 
 function update() {
   logo1.style.left = xPosition1 + "px";
