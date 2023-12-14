@@ -15,8 +15,8 @@ let xSpeed1 = 4;
 let ySpeed1 = 4;
 
 // Logo2 moving velocity Variables
-let xPosition2 = 50;
-let yPosition2 = 10;
+let xPosition2 = 50;  //make 10 if it doesnt work
+let yPosition2 = 10; 
 let xSpeed2 = 8;
 let ySpeed2 = 8;
 
