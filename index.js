@@ -3,7 +3,6 @@ console.log("thumbs up copy"); //very cool thumb
 const section = document.querySelector("section");
 const logo1 = document.querySelectorAll(".logo")[0];
 const logo2 = document.querySelectorAll(".logo")[1];
-const logo3 = document.querySelectorAll(".logo")[2];
 const FPS = 60;
 
 section.style.height = window.innerHeight + "px";
@@ -20,12 +19,6 @@ let xPosition2 = 50;  //make 10 if it doesnt work
 let yPosition2 = 10; 
 let xSpeed2 = 8;
 let ySpeed2 = 8;
-
-// Logo3 moving velocity Variables
-let xPosition3 = 150;  //make 10 if it doesnt work
-let yPosition3 = 10; 
-let xSpeed3 = 12;
-let ySpeed3 = 12;
 
 function update() {
   logo1.style.left = xPosition1 + "px";
@@ -57,16 +50,6 @@ setInterval(() => {
   xPosition2 += xSpeed2;
   yPosition2 += ySpeed2;
 
-   // Logo3 movement
-  if (xPosition3 + logo3.clientWidth >= window.innerWidth || xPosition3 <= 0) {
-    xSpeed3 = -xSpeed3;
-  }
-  if (yPosition3 + logo3.clientHeight >= window.innerHeight || yPosition3 <= 0){
-    ySpeed3 = -ySpeed3;
-}
-
-  xPosition3 += xSpeed3;
-  yPosition3 += ySpeed3;
 
   update();
 }, 1000 / FPS);
@@ -76,9 +59,14 @@ window.addEventListener("resize", () => {
   yPosition1 = 10;
   xPosition2 = 100;
   yPosition2 = 100;
-  xposition3= 100;
-  yposition3= 100;
+ 
 
   section.style.height = window.innerHeight + "px";
   section.style.width = window.innerWidth + "px";
+
+
 });
+
+
+
+
