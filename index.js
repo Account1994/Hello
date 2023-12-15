@@ -3,6 +3,7 @@ console.log("thumbs up copy"); //very cool thumb
 const section = document.querySelector("section");
 const logo1 = document.querySelectorAll(".logo")[0];
 const logo2 = document.querySelectorAll(".logo")[1];
+const logo3 = document.queryselectorall(".logo")[2];
 const FPS = 60;
 
 section.style.height = window.innerHeight + "px";
@@ -20,12 +21,23 @@ let yPosition2 = 10;
 let xSpeed2 = 8;
 let ySpeed2 = 8;
 
+//logo3 moving velocity variables
+let xPosition3= 200;
+let yPosition3= 200;
+let ySpeed3= 2;
+let xSpeed3= 2;
+
 function update() {
   logo1.style.left = xPosition1 + "px";
   logo1.style.top = yPosition1 + "px";
+
   logo2.style.left = xPosition2 + "px";
   logo2.style.top = yPosition2 + "px";
+
+  logo3.style.left = xPosition3 + "px";
+  logo3.style.top = yPosition3 + "px";
 }
+
 
 setInterval(() => {
   // Logo1 movement
