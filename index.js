@@ -15,10 +15,10 @@ let xSpeed1 = 4;
 let ySpeed1 = 4;
 
 // Logo2 moving velocity Variables
-let xPosition2 = 100;
-let yPosition2 = 100;
-let xSpeed2 = 3;
-let ySpeed2 = 3;
+let xPosition2 = 5;
+let yPosition2 = 5;
+let xSpeed2 = 8;
+let ySpeed2 = 8;
 
 function update() {
   logo1.style.left = xPosition1 + "px";
@@ -62,6 +62,3 @@ window.addEventListener("resize", () => {
   section.style.height = window.innerHeight + "px";
   section.style.width = window.innerWidth + "px";
 });
-
-
-
