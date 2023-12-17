@@ -61,8 +61,16 @@ setInterval(() => {
 
   xPosition2 += xSpeed2;
   yPosition2 += ySpeed2;
+//hopefully logo 3 movement
+if (xPosition3 + logo3.clientWidth >= window.innerWidth || xPosition3 <= 0) {
+  xSpeed3 = -xSpeed3;
+}
+if (yPosition3 + logo3.clientHeight >= window.innerHeight || yPosition3 <= 0) {
+  ySpeed3 = -ySpeed3;
+}
 
-
+xPosition3 += xSpeed3;
+yPosition3 += ySpeed3;
   update();
 }, 1000 / FPS);
 
@@ -71,6 +79,8 @@ window.addEventListener("resize", () => {
   yPosition1 = 10;
   xPosition2 = 100;
   yPosition2 = 100;
+  xPosition3 = 200;
+yPosition3 = 200;
  
 
   section.style.height = window.innerHeight + "px";
