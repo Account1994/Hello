@@ -3,7 +3,6 @@ console.log("thumbs up copy"); //very cool thumb
 const section = document.querySelector("section");
 const logo1 = document.querySelectorAll(".logo")[0];
 const logo2 = document.querySelectorAll(".logo")[1];
-const logo3 = document.queryselectorall(".logo")[2];
 const FPS = 60;
 
 section.style.height = window.innerHeight + "px";
@@ -16,28 +15,17 @@ let xSpeed1 = 4;
 let ySpeed1 = 4;
 
 // Logo2 moving velocity Variables
-let xPosition2 = 50;  //make 10 if it doesnt work
-let yPosition2 = 10; 
-let xSpeed2 = 8;
-let ySpeed2 = 8;
-
-//logo3 moving velocity variables
-let xPosition3= 200;
-let yPosition3= 200;
-let ySpeed3= 2;
-let xSpeed3= 2;
+let xPosition2 = 100;
+let yPosition2 = 100;
+let xSpeed2 = 3;
+let ySpeed2 = 3;
 
 function update() {
   logo1.style.left = xPosition1 + "px";
   logo1.style.top = yPosition1 + "px";
-
   logo2.style.left = xPosition2 + "px";
   logo2.style.top = yPosition2 + "px";
-
-  logo3.style.left = xPosition3 + "px";
-  logo3.style.top = yPosition3 + "px";
 }
-
 
 setInterval(() => {
   // Logo1 movement
@@ -61,16 +49,7 @@ setInterval(() => {
 
   xPosition2 += xSpeed2;
   yPosition2 += ySpeed2;
-//hopefully logo 3 movement
-if (xPosition3 + logo3.clientWidth >= window.innerWidth || xPosition3 <= 0) {
-  xSpeed3 = -xSpeed3;
-}
-if (yPosition3 + logo3.clientHeight >= window.innerHeight || yPosition3 <= 0) {
-  ySpeed3 = -ySpeed3;
-}
 
-xPosition3 += xSpeed3;
-yPosition3 += ySpeed3;
   update();
 }, 1000 / FPS);
 
@@ -79,16 +58,10 @@ window.addEventListener("resize", () => {
   yPosition1 = 10;
   xPosition2 = 100;
   yPosition2 = 100;
-  xPosition3 = 200;
-yPosition3 = 200;
- 
 
   section.style.height = window.innerHeight + "px";
   section.style.width = window.innerWidth + "px";
-
-
 });
-
 
 
 
