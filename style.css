@@ -1,102 +1,78 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: 10;
-
-}
-
-
-
-h1 {
+    box-sizing: border-box;
+  }
+  
+  h1 {
     color: black;
-
-}
-
-#vc {
-    color: black
-}
-
-#hdr {}
-
-#big {
+  }
+  
+  #vc {
+    color: black;
+  }
+  
+  #hdr {
+  }
+  
+  .logo {
     width: 300px;
     height: 300px;
     animation: myRotate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     position: absolute;
-    top: 600px;
-    left: 600px;
-
-
-}
-
-@keyframes mySlide {
+  }
+  
+  @keyframes mySlide {
     from {
-        margin-left: 100%;
+      margin-left: 100%;
     }
-
     to {
-        margin-left: 0%;
+      margin-left: 0%;
     }
-}
-
-
-
-
-
-@keyframes myRotate {
-
-
+  }
+  
+  @keyframes myRotate {
     100% {
-        transform: rotateZ(360deg)
+      transform: rotateZ(360deg)
     }
-}
-
-body {
-
+  }
+  
+  body {
     overflow: hidden;
     animation: bgcolor infinite 20s;
-}
-
-@keyframes bgcolor {
+  }
+  
+  @keyframes bgcolor {
     0% {
-        background: #e74c3c;
-
+      background: #e74c3c;
     }
-
+  
     20% {
-        background: #e67e22;
-
+      background: #e67e22;
     }
-
+  
     40% {
-        background: #f1c40f;
-
+      background: #f1c40f;
     }
-
+  
     60% {
-        background: #2ecc71;
-
+      background: #2ecc71;
     }
-
+  
     80% {
-        background: #2980b9;
-
+      background: #2980b9;
     }
-
+  
     90% {
-        background: #8e44ad;
-
+      background: #8e44ad;
     }
-
+  
     100% {
-        background: #e74c3c;
-
+      background: #e74c3c;
     }
-}
-
-section {
+  }
+  
+  section {
     position: relative;
-    overflow: hidden;
-}
