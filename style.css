@@ -15,7 +15,7 @@
   #hdr {
   }
   
-  .logo thumb {
+  .logo {
     width: 300px;
     height: 300px;
     animation: myRotate;
@@ -24,24 +24,6 @@
     position: absolute;
       overflow: hidden;
   }
-
-  .logo thumb 2{
-    width: 300px;
-    height: 300px;
-    animation: myRotate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    position: absolute;
-      overflow: hidden;
-
-        .logo thumb 3 {
-    width: 300px;
-    height: 300px;
-    animation: myRotate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    position: absolute;
-      overflow: hidden;
   @keyframes mySlide {
     from {
       margin-left: 100%;
