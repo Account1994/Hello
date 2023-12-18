@@ -22,6 +22,7 @@
     animation-duration: 5s;
     animation-iteration-count: infinite;
     position: absolute;
+      overflow: hidden;
   }
   
   @keyframes mySlide {
