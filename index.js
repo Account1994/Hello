@@ -1,64 +1,55 @@
 console.log("thumbs up copy"); //very cool thumb
 
 const section = document.querySelector("section");
-const logo1 = document.querySelectorAll(".logo")[0];
-const logo2 = document.querySelectorAll(".logo")[1];
+const thumbs = document.querySelectorAll(".logo");
+
 const FPS = 60;
 
 section.style.height = window.innerHeight + "px";
 section.style.width = window.innerWidth + "px";
 
-// Logo1 moving velocity Variables
-let xPosition1 = 10;
-let yPosition1 = 10;
-let xSpeed1 = 4;
-let ySpeed1 = 4;
+// Velocity and position variables for all thumbs
+let thumbsData = [];
 
-// Logo2 moving velocity Variables
-let xPosition2 = 5;
-let yPosition2 = 5;
-let xSpeed2 = 8;
-let ySpeed2 = 8;
+for (let i = 0; i < thumbs.length; i++) {
+    thumbsData.push({
+        xPosition: 10 + i * 100,
+        yPosition: 10 + i * 100,
+        xSpeed: 2 + i,
+        ySpeed: 2 + i,
+    });
+}
 
 function update() {
-  logo1.style.left = xPosition1 + "px";
-  logo1.style.top = yPosition1 + "px";
-  logo2.style.left = xPosition2 + "px";
-  logo2.style.top = yPosition2 + "px";
+    thumbs.forEach((thumb, index) => {
+        thumb.style.left = thumbsData[index].xPosition + "px";
+        thumb.style.top = thumbsData[index].yPosition + "px";
+    });
 }
 
 setInterval(() => {
-  // Logo1 movement
-  if (xPosition1 + logo1.clientWidth >= window.innerWidth || xPosition1 <= 0) {
-    xSpeed1 = -xSpeed1;
-  }
-  if (yPosition1 + logo1.clientHeight >= window.innerHeight || yPosition1 <= 0) {
-    ySpeed1 = -ySpeed1;
-  }
+    thumbsData.forEach((thumb, index) => {
+        // Thumb movement
+        if (thumb.xPosition + thumbs[index].clientWidth >= window.innerWidth || thumb.xPosition <= 0) {
+            thumb.xSpeed = -thumb.xSpeed;
+        }
+        if (thumb.yPosition + thumbs[index].clientHeight >= window.innerHeight || thumb.yPosition <= 0) {
+            thumb.ySpeed = -thumb.ySpeed;
+        }
 
-  xPosition1 += xSpeed1;
-  yPosition1 += ySpeed1;
+        thumb.xPosition += thumb.xSpeed;
+        thumb.yPosition += thumb.ySpeed;
+    });
 
-  // Logo2 movement
-  if (xPosition2 + logo2.clientWidth >= window.innerWidth || xPosition2 <= 0) {
-    xSpeed2 = -xSpeed2;
-  }
-  if (yPosition2 + logo2.clientHeight >= window.innerHeight || yPosition2 <= 0) {
-    ySpeed2 = -ySpeed2;
-  }
-
-  xPosition2 += xSpeed2;
-  yPosition2 += ySpeed2;
-
-  update();
+    update();
 }, 1000 / FPS);
 
 window.addEventListener("resize", () => {
-  xPosition1 = 10;
-  yPosition1 = 10;
-  xPosition2 = 100;
-  yPosition2 = 100;
+    thumbsData.forEach(thumb => {
+        thumb.xPosition = 10 + i * 100;
+        thumb.yPosition = 10 + i * 100;
+    });
 
-  section.style.height = window.innerHeight + "px";
-  section.style.width = window.innerWidth + "px";
+    section.style.height = window.innerHeight + "px";
+    section.style.width = window.innerWidth + "px";
 });
