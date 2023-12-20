@@ -1,5 +1,5 @@
 console.log("thumbs up copy"); //very cool thumb
-
+//very silly indeed !!
 const section = document.querySelector("section");
 
 const FPS = 60;
