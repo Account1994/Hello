@@ -57,23 +57,20 @@
       background: #f1c40f;
     }
   
-    50% {
+    60% {
       background: #2ecc71;
     }
   
-    70% {
+    80% {
       background: #2980b9;
     }
   
-    80% {
+    90% {
       background: #8e44ad;
     }
   
-    90% {
+    100% {
       background: #e74c3c;
-    }
-        100% {
-      background: #2861d4;
     }
   }
   
